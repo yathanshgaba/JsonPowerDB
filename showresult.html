@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Login2Xplore Mini Project </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+</head>
+<body>
+<br>
+<br>
+<center><h1>Show Result</h1></center>
+    <center><input id="rollnum" maxlength="50" placeholder="Enter Roll Number" name="rollnum" type="text" /><br><br>
+        <input type="button" value="Show Result" onclick="showresult();"/></center>
+    <p id="showresult"></p>
+	 <script>
+        function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+            var url = dbBaseUrl + apiEndPointUrl;
+            var jsonObj;
+            $.post(url, reqString, function (result) {
+                jsonObj = JSON.parse(result);
+            }).fail(function (result) {
+                var dataJsonObj = result.responseText;
+                jsonObj = JSON.parse(dataJsonObj);
+            });
+            return jsonObj;
+        }
+        function showresult(){
+            var token = "90936017|-31948847081412932|90933772";
+            var dbname = "Student";
+            var relationName = "Student-details";
+            var rollnum = document.getElementById("rollnum").value;
+            var jsonStr = {
+                RollNo : rollnum,
+            };
+            var reqString = createGETRequest(token, dbname, relationName, JSON.stringify(jsonStr));
+            alert(reqString);
+            jQuery.ajaxSetup({async: false});
+            var resultObj = executeCommand(reqString,
+                    "http://api.login2explore.com:5577", "/api/irl");
+            jQuery.ajaxSetup({async: true});
+            
+            var data = JSON.stringify(resultObj);
+            
+            var res = data.split("\"");
+            var mainContainer = document.getElementById("showresult");
+            mainContainer.innerHTML = "sname : " + res[18].replace("\\","") + "      sub1 : " + res[10].replace("\\","")
+                + "     sub2 : " + res[22].replace("\\","") + "        sub3 : " + res[14].replace("\\", ""); 
+
+            
+        }
+    </script>
+</body>
+</html>

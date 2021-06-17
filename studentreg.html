@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Login2Xplore Mini Project </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<center><h1>Student Registration</h1></center>
+<br>
+<br>
+<form action="" method="post">
+        <table align="center">
+            <tbody>
+                <tr>
+                    <td><label for="sname">Student Full Name : </label></td>
+                    <td><input id="sname" maxlength="50" name="sname" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="rollnum">Student Roll Number :  </label></td>
+                    <td><input id="rollnum" maxlength="3" name="rollnum" type="text" /></td>
+                </tr>
+                <tr>
+                    <td><label for="sub1">Subject 1 </label></td>
+                    <td><input id="sub1" maxlength="5" name="sub1" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="sub2">Subject 2</label></td>
+                    <td><input id="sub2" maxlength="5" name="sub2" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="sub3">Subject 3</label></td>
+                    <td><input id="sub3" maxlength="5" name="sub3" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td align="right"><input type="button" value="Register" onclick=" hello();"/></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </form>
+	 <script>
+        function createPUTRequest(connToken, jsonObj, dbName, relName) {
+            var putRequest = "{\n"
+                    + "\"token\" : \""
+                    + connToken
+                    + "\","
+                    + "\"dbName\": \""
+                    + dbName
+                    + "\",\n" + "\"cmd\" : \"PUT\",\n"
+                    + "\"rel\" : \""
+                    + relName + "\","
+                    + "\"jsonStr\": \n"
+                    + jsonObj
+                    + "\n"
+                    + "}";
+            return putRequest;
+        }
+        function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+            var url = dbBaseUrl + apiEndPointUrl;
+            var jsonObj;
+            $.post(url, reqString, function (result) {
+                jsonObj = JSON.parse(result);
+            }).fail(function (result) {
+                var dataJsonObj = result.responseText;
+                jsonObj = JSON.parse(dataJsonObj);
+            });
+            return jsonObj;
+        }
+
+        function validateAndGetFormData() {
+            
+            var sname = document.getElementById("sname").value;
+            var rollnum = document.getElementById("rollnum").value;
+            var sub1 = document.getElementById("sub1").value;
+            var sub2 = document.getElementById("sub2").value;
+            var sub3 = document.getElementById("sub3").value;
+            
+            var jsonStrObj = {
+                StudentName: sname,
+                Rollnum: rollnum,
+                Subject1: sub1,
+                Subject2: sub2,
+                Subject3: sub3,
+            };
+            return JSON.stringify(jsonStrObj);
+        }
+
+        function hello() {
+
+            var jsonStr = validateAndGetFormData();
+            if (jsonStr === "") {
+                return;
+            }
+            var putReqStr = createPUTRequest("90936017|-31948847081412932|90933772",
+                    jsonStr, "Student", "Student-details");
+            alert(putReqStr);
+            jQuery.ajaxSetup({async: false});
+            var resultObj = executeCommand(putReqStr,
+                    "http://api.login2explore.com:5577", "/api/iml");
+            jQuery.ajaxSetup({async: true});
+            alert( "INSERTED "+JSON.stringify(resultObj));
+
+        }
+    </script>
+</body>
+</html>
