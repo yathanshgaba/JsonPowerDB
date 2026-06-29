@@ -1,27 +1,49 @@
 # JsonPowerDB AGENTS.md
 
 <!-- codex-project-brain:start -->
-## Codex And Lovable Project Brain
+## Codex And Lovable Brain Layer
 
-- Treat `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault` as the durable project brain for this repo.
-- Before planning or coding, read `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Projects/JsonPowerDB.md` and this `AGENTS.md`.
-- After durable discoveries, verified fixes, pushes, Lovable syncs, Supabase migrations, or production checks, update `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Projects/JsonPowerDB.md`.
-- Keep Lovable-facing context safe and curated in `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Lovable Context/Projects/JsonPowerDB.md`.
-- Do not store secrets, raw private chat dumps, OAuth tokens, API keys, service-role keys, DB URLs, cookies, OTPs, or `.env` contents in repo docs or Obsidian.
-- Separate source-level proof from live deployment proof; GitHub `main`, Lovable `Ready`, and local tests do not prove Supabase or production state by themselves.
+Use Obsidian as the active brain layer for this repo, not as a passive archive.
+
+### Before Dev Work
+
+- Read `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Maps/Brain Home.md`.
+- Read `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Maps/Development Brain MOC.md`.
+- Read `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Projects/_all-projects-index.md`.
+- Read `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Projects/JsonPowerDB.md`.
+- Read this `AGENTS.md`.
+
+### During Dev Work
+
+- Use `Daily/` or `Logs/Dev Work Ledger.md` for substantial work notes.
+- Use `Inbox/` only for temporary captures that still need triage.
+- Keep links between commits, files, Lovable project IDs, Supabase evidence, and project notes.
+- Keep source proof and live proof separate.
+
+### After Dev Work
+
+- Update `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Projects/JsonPowerDB.md` with durable facts, changed behavior, verified proof, and remaining blockers.
+- Update `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Lovable Context/Projects/JsonPowerDB.md` when Lovable should safely benefit from the context.
+- Update repo `AGENTS.md` when a new rule should travel with the GitHub repo.
+- Update runbooks or decisions when the learning applies across projects.
+
+### Safety
+
+- Do not store secrets, raw private chat dumps, OAuth tokens, API keys, service-role keys, DB URLs, cookies, OTPs, or `.env` contents in repo docs, Obsidian, or Lovable Context.
+- Do not infer live deployment from GitHub `main`, Lovable `Ready`, or local tests.
 
 ## Current Source Context
 
 - GitHub repo: `yathanshgaba/JsonPowerDB`
 - Local checkout: `/Users/yathansh.gaba/codex-repos/yathanshgaba/JsonPowerDB`
 - Current local branch: `main`
-- Current local HEAD: `8fc407b9dd80`
-- Current local HEAD date: `2021-06-17T14:31:49+05:30`
-- Worktree state when this documentation block was generated: `dirty`
+- Current local HEAD: `a84b1a38f81c`
+- Current local HEAD date: `2026-06-30T00:09:15+05:30`
+- Worktree state when this documentation block was generated: `clean`
 - Repo-context dossier: `/Users/yathansh.gaba/.codex/repo-context/yathanshgaba/repos/JsonPowerDB/DOSSIER.md`
 - Repo-context `AGENTS.md` proposal: `/Users/yathansh.gaba/.codex/repo-context/yathanshgaba/repos/JsonPowerDB/AGENTS.proposed.md`
 - Repo-context generated at: `2026-06-18T11:56:58.684457+00:00`
-- Dossier may be stale versus local HEAD: `False`
+- Dossier may be stale versus local HEAD: `True`
 
 ## Lovable Context
 
