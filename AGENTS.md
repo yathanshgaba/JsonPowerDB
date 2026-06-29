@@ -1,0 +1,99 @@
+# JsonPowerDB AGENTS.md
+
+<!-- codex-project-brain:start -->
+## Codex And Lovable Project Brain
+
+- Treat `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault` as the durable project brain for this repo.
+- Before planning or coding, read `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Projects/JsonPowerDB.md` and this `AGENTS.md`.
+- After durable discoveries, verified fixes, pushes, Lovable syncs, Supabase migrations, or production checks, update `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Projects/JsonPowerDB.md`.
+- Keep Lovable-facing context safe and curated in `/Users/yathansh.gaba/Documents/Codex/Yathansh-Ops-Vault/Lovable Context/Projects/JsonPowerDB.md`.
+- Do not store secrets, raw private chat dumps, OAuth tokens, API keys, service-role keys, DB URLs, cookies, OTPs, or `.env` contents in repo docs or Obsidian.
+- Separate source-level proof from live deployment proof; GitHub `main`, Lovable `Ready`, and local tests do not prove Supabase or production state by themselves.
+
+## Current Source Context
+
+- GitHub repo: `yathanshgaba/JsonPowerDB`
+- Local checkout: `/Users/yathansh.gaba/codex-repos/yathanshgaba/JsonPowerDB`
+- Current local branch: `main`
+- Current local HEAD: `8fc407b9dd80`
+- Current local HEAD date: `2021-06-17T14:31:49+05:30`
+- Worktree state when this documentation block was generated: `dirty`
+- Repo-context dossier: `/Users/yathansh.gaba/.codex/repo-context/yathanshgaba/repos/JsonPowerDB/DOSSIER.md`
+- Repo-context `AGENTS.md` proposal: `/Users/yathansh.gaba/.codex/repo-context/yathanshgaba/repos/JsonPowerDB/AGENTS.proposed.md`
+- Repo-context generated at: `2026-06-18T11:56:58.684457+00:00`
+- Dossier may be stale versus local HEAD: `False`
+
+## Lovable Context
+
+- No Lovable Desktop project ID is confidently mapped yet.
+<!-- codex-project-brain:end -->
+
+Repository: `yathanshgaba/JsonPowerDB`
+
+## Project Purpose
+
+JsonPowerDB
+
+## Detected Stack
+
+- No stack detected.
+
+## How To Run Locally
+
+- `No local dev script detected. Inspect repo before running.`
+
+## How To Test
+
+- `No test/lint/typecheck script detected. Add or identify targeted tests before behavior changes.`
+
+## How To Build
+
+- `No build script detected. Inspect package/config files before claiming build success.`
+
+## Deploy Commands
+
+Do not deploy without explicit user approval.
+
+- `No deploy-like script detected.`
+
+## What Not To Break
+
+- Do not commit secrets, OAuth tokens, API keys, credentials, or database connection strings.
+- Do not weaken auth, RLS, protected routes, secure headers, audit logs, role permissions, provider honesty, or production data integrity.
+- Do not replace real DB-driven pages with mock data.
+- Do not run destructive database writes or deployments without explicit approval.
+
+## Security Guardrails
+
+- Inspect auth, permissions, data access, and provider boundaries before editing related code.
+- Preserve least privilege and tenant/user isolation.
+- Keep external calls auditable and server/edge mediated where the repo already uses that pattern.
+
+## Data Guardrails
+
+- Preserve real data flows, auditability, and status transition integrity.
+- Do not alter migrations, RLS policies, storage policies, or production records without explicit approval.
+
+## Provider And Integration Guardrails
+
+- Do not hardcode provider success or fake external API results.
+- Do not print provider secrets or tokens in logs, docs, commits, or chat.
+- Keep retry, status, and failure handling honest and observable.
+
+## Codex Workflow
+
+- Start with `$repo-context-router` and load the repo dossier before planning or coding.
+- Use `$lovable-grill-me` for unclear product requirements.
+- Use `$lovable-to-prd` for specs and `$lovable-to-vertical-issues` for implementation slicing.
+- Use `$lovable-tdd-implementation` for code changes.
+- Use `$lovable-architecture-audit` for refactor or architecture review.
+- Do not use `$recruit-ai-guardrails` unless this repo is Recruit AI Copilot or dossier evidence clearly matches that product family.
+
+## Required Final Report After Changes
+
+- Files changed
+- Behavior changed
+- Tests run and exact results
+- Build/lint/typecheck results if run
+- Risks and rollback notes
+- Manual QA steps
